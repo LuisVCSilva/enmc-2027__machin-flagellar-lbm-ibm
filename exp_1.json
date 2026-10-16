@@ -1,0 +1,50 @@
+{
+    "model_I": {
+        "Lambda": 5.0,
+
+        "bvp": {
+            "n_mesh": 200,
+            "tol": 1e-8,
+            "max_nodes": 50000
+        },
+
+        "output": {
+            "directory": "results_machin_reference"
+        }
+    },
+
+    "model_II": {
+        "grid": {
+            "Nx": 300,
+            "Ny": 120,
+            "Nt": 8000,
+            "dx": 1.0,
+            "dt": 1.0
+        },
+
+        "fluid": {
+            "rho0": 1.0,
+            "nu": 0.08,
+            "cs2": 0.3333333333333333
+        },
+
+        "flagellum": {
+            "x0": 30.0,
+            "Lf": 170.0,
+            "Nflag": 180,
+            "h0": 2.0,
+            "period": 1600.0,
+            "y_center": 60.0
+        },
+
+        "diagnostics": {
+            "interval": 100,
+            "snapshot_interval": 400
+        },
+
+        "output": {
+            "directory": "results_model_II_machin_lbm",
+            "snapshot_directory": "snapshots"
+        }
+    }
+}
